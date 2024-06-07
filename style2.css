@@ -1,0 +1,251 @@
+*{
+    padding : 0;
+    margin : 0;
+    box-sizing : border-box;
+}
+
+:root{
+    --bg--light: rgb(197, 197, 224);
+    --bg--dark: rgb(107, 107, 177);
+    --white--color: white;
+    --black--color : black;
+
+}
+
+body{
+    position : relative;
+    background-color: var(--bg--light);
+}
+
+/*.....Header....*/
+nav{
+    background-color: var(--bg--dark);
+    position: fixed;
+    top: 0;
+    width: 100%; 
+    z-index: 1000; 
+    /* box-shadow: 0 7px 10px rgba(0,0,0,0.3); */
+}
+.navbar{
+    display : flex;
+    justify-content :space-between;
+    align-items : center;
+    padding : 1.3rem 0;
+}
+
+.navbar .logo{
+    color:var(--white--color);
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size : 1.5rem;
+}
+
+.obj-width{
+    max-width: 1200px;
+    margin : auto;
+}
+
+.icon-container {
+    position: relative;
+}
+
+#newsButton {
+    font-size: 23px;
+    cursor: pointer;
+    color: var(--white--color);
+    border: none;
+}
+
+
+#search-input{
+    max-width: 400px ;
+    padding : 10px 20px;
+    border : none;
+    border-radius : 5px;
+    font-size : 18px;
+    color: var(--black--color);
+}
+
+#search-button {
+    padding : 10px 20px;
+    background-color: var(--white--color);
+    color :var(--black--color);
+    border : none;
+    font-size : 18px;
+    cursor : pointer;
+    border-radius : 5px;
+    margin-left: 10px;
+    margin-right : 10px;
+}
+
+#search-button:hover{
+    opacity : 80%;
+    font-size: 18.8px;
+}
+
+/* Main */
+main {
+    position: relative; 
+    overflow: hidden; 
+    margin-top: 80px;
+    margin-bottom: 80px;
+    
+}
+
+#blog-container {
+    padding : 3rem 0;
+    display : flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap : wrap;
+    margin-bottom: 5rem;
+}
+
+.blog-card {
+    width : 280px;
+    border : 1px solid #2d4c50;
+    border-radius : 10px;
+    cursor : pointer;
+    padding : 1rem;
+    margin : 10px;
+    margin-top: 4.8rem;
+    background-color:var(--white--color);
+}
+
+.blog-card:hover {
+    box-shadow : 4px 4px 10px rgba(00,0,0,0.3);
+    opacity: 50%;
+    font-size: 22px;
+}
+
+.blog-card img{
+    width : 100%;
+    height : 280px;
+    object-fit: cover;
+    border-radius : 5px;
+    margin-bottom : 1rem;
+}
+
+.blog-card img:hover{
+    height : 284px;
+    object-fit: cover;
+    border-radius : 5px;
+    margin-bottom : 1rem;
+}
+
+.blog-card h2 {
+    color: var(--black--color);
+    font-size : 1.7rem;
+    font-weight : 500;
+}
+
+.blog-card p {
+    font-size : 1.2rem;
+    padding-top : 0.7rem;
+}
+
+/* Footer */
+
+.menu{
+    background-color: var(--bg--dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*margin-top: 42rem;*/
+    position: fixed;
+    width: 100%; 
+    z-index: 1000; 
+    bottom: 0; /* Positions it at the bottom */
+    
+}
+.menu-head{
+    background-color: rgb(197, 197, 224);
+    color : black;
+    border-radius: 1rem;
+    padding: 0.8rem;
+    margin: 1rem 1rem;
+    font-size: 18px;
+}
+.menu-head:hover{
+    box-shadow : 4px 4px 10px rgba(00,0,0,0.3);
+    opacity: 80%;
+    font-size: 19px;
+    cursor: pointer;
+}
+.menu-head a{
+    text-decoration: none;
+    color:black;
+}
+
+/*........Togglemenu button.......*/
+.container{
+    top: 150px;
+    height : 70px;
+    width : 70px;
+    background-color: var(--white--color);
+    border-radius: 50px;
+    position : relative;
+    transition : 0.4s ease;
+}
+.toggleBox{
+    position : relative;
+    display : block;
+    height : 70px;
+    width : 70px;
+    border-radius : 50px;
+}
+.icon{
+    position : absolute;
+    height : 4px;
+    width : 35px;
+    top : 50%;
+    left : 50%;
+    transform : translate(-50%,-50%);
+    background-color : #161d2c;
+    border-radius : 50px;
+}
+.icon::before, .icon::after{
+    position : absolute;
+    content : '';
+    height : 4px;
+    width : 35px;
+    top : 50%;
+    left : 50%;
+    transform : translate(-50%,-50%);
+    background-color : #161d2c;
+    border-radius : 50px;
+    transition : 0.3s;
+}
+.icon::before{
+    top : 12px;
+}
+.icon ::after{
+    bottom : 8px;
+}
+
+@media(max-width : 1000px){
+    nav {
+        padding : 0 20px;
+        
+    }
+    .navbar .logo {
+        font-size: 1rem;
+    }
+    .icon-container i {
+        font-size: 20px; 
+        color: var(--white--color); 
+    }
+    #search-input {
+        width : 100px;
+        padding : 10px 10px;
+    }
+    .blog-card {
+        width : 70%;
+        margin : auto;
+        margin-top: 80px;
+    }
+    .menu-head {
+        font-size: 10px;
+        margin: 0.4rem;
+    }
+}
