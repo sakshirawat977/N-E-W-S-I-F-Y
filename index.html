@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N E W S I F Y</title>
+
+    <link rel="stylesheet" href="style2.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+<body>
+    <header>
+        <!--..........Nav Bar...........-->
+        <nav>
+            <div class="navbar obj-width">
+
+                <a class="logo" href="index.html">
+                    <i class="fa-solid fa-n"></i>
+                    <i class="fa-solid fa-e"></i>
+                    <i class="fa-solid fa-w"></i>
+                    <i class="fa-solid fa-s"></i>
+                    <i class="fa-solid fa-i"></i>
+                    <i class="fa-solid fa-f"></i>
+                    <i class="fa-solid fa-y"></i>
+                </a>
+                <div class="search-container">
+                    <input type="text" placeholder="click here to write" id="search-input">
+                    <button id="search-button" onmousedown="changeColor();" onmouseup="changeColorBack()" >Search</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--..........Blog Cards...........-->
+    <main id="blog-container" class="obj-width">
+        
+        <!--
+            <div class="blog-card">
+                <img src="https://placehold.co/600x400" alt="">
+                <h2>This is a title</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, omnis! Similique quam rem alias eius. Temporibus distinctio nesciunt atque quidem?</p>
+            </div>
+        -->
+    </main>
+
+    <footer>
+        <div class="menu">
+             <div class="menu-head" data-type="general"> <a href="index.html">General</a> </div>
+            <div class="menu-head" data-type="entertainment"> <a>Entertainment</a> </div>
+            <div class="menu-head" data-type="sports"> <a>Sports</a> </div>
+            <div class="menu-head" data-type="health"> <a>Health</a> </div>
+            <div class="menu-head" data-type="science"> <a>Science</a> </div>
+            <div class="menu-head" data-type="technology"> <a>Technology</a> </div>
+        </div>
+    </footer>
+
+    <script src = "script.js"></script>
+    <script src = "apiHandling.js"></script>
+</body>
+</html>
